@@ -6,6 +6,26 @@ public class Retangulo {
     //Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades de um local.
     // Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés necessárias para o local.
 
-    public String ladoA;
-    public String ladoB;
+    public double base;
+    public double altura;
+
+    public Retangulo(double base, double altura){
+        this.base = base;
+        this.altura = altura;
+    }
+
+    public void mudarValorDosLados(double baseNova, double alturaNova){
+        this.base = baseNova;
+        this.altura = alturaNova;
+    }
+
+    public double calcularArea(){
+        double area = this.base * this.altura;
+        return area;
+    }
+
+    public double perimetro(){
+        double peri = 2*(this.altura * this.base);
+        return peri;
+    }
 }

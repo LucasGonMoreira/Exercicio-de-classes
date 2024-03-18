@@ -1,27 +1,23 @@
 package br.com.catolicapb.Model;
 
 public class Quadrado {
-    public String tamanhoDoLado;
-
-    public String tamanhoInicial;
+    public double tamanhoDoLado;
 
     public Quadrado(
-            String tamanhoDoLado
+            double tamanhoDoLado
     ){
         this.tamanhoDoLado = tamanhoDoLado;
     }
 
-    public void mudarTamanhoDoLado(String tamanhoNovo){
+    public void mudarTamanhoDoLado(double tamanhoNovo){
 
-        this.tamanhoInicial = this.tamanhoDoLado;
 
         this.tamanhoDoLado = tamanhoNovo;
     }
-
-    public void retomarTamanhoDoLado(){
-        this.tamanhoDoLado = this.tamanhoInicial;
+    public double area(){
+        double resultado = this.tamanhoDoLado * this.tamanhoDoLado;
+        return resultado;
     }
-
     @Override
     public String toString() {
         return "Quadrado{" +
